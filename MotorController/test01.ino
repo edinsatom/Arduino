@@ -18,19 +18,32 @@ void setup(){
 }
 
 void loop(){
+    // digitalWrite(enA, HIGH);
+    // digitalWrite(in1, LOW);
+    // digitalWrite(in2, HIGH);
+
+    // digitalWrite(enB, HIGH);
+    // digitalWrite(in3, LOW);
+    // digitalWrite(in4, HIGH);
+
+    // delay(3000);
+
+    // digitalWrite(enA, LOW);
+    // digitalWrite(enB, LOW);
+    // delay(2000);
     velocity = 100;
 
     run(velocity);
-    delay(3000);
+    delay(2000);
 
     stop();
-    delay(2000);
+    delay(800);
 
     runRight(velocity);
     delay(3000);
     
     stop();
-    delay(2000);
+    delay(800);
 }
 
 void run(short vel){
@@ -51,6 +64,6 @@ void runRight(short vel){
 }
 
 void stop(){
-    analogWrite(enA, 0);
-    analogWrite(enB, 0);
+    analogWrite(enA, LOW);
+    analogWrite(enB, LOW);
 }
